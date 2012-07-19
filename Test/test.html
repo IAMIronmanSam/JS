@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.2.min.js" ></script>
+    <script  type="text/javascript" charset="utf-8" async defer>
+     $(".box div") .hover(
+      function () {
+      $(this).toggleClass("active")
+      .next().stop(true, true).slideToggle();
+  }
+);
+    </script>
+    <style>
+      .box {
+        /* basic styling */
+        width: 350px;
+        height: 95px;
+        border: 1px solid #555;
+        font: 14px Arial;
+      
+        /* flexbox setup */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+      
+        display: -moz-box;
+        -moz-box-orient: vertical;
+      
+        display: box;
+        box-orient: vertical;
+      }
+      
+      .box > div 
+      {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -ms-box-flex: 1;
+        box-flex: 1;
+
+        -webkit-transition: width 0.7s ease-out;
+        -moz-transition: width 0.7s ease-out;
+        -o-transition: width 0.7s ease-out;
+        -ms-transition: width 0.7s ease-out;
+        transition: width 0.7s ease-out;
+    }
+      
+      /* our colors */
+      .box > div:nth-child(1){ background : #FCC; }
+      .box > div:nth-child(2){ background : #ADF; }
+     
+      .box > div:hover { 
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div id = "Content">1</div>
+      <div id = "Content">2</div>
+    </div>
+    <div>
+      sadsjasdasjkb
+    </div>
+  </body>
+</html>

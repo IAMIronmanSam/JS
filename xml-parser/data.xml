@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+<article>
+	<title>Welcome to Tutorials2learn</title>
+	<description>We recommend our visitors, to visiting us back, to get updates on the articles. Forget not to keep referring to your friends and colleagues if you think it is worth to visit this site.</description>
+	<url>http://www.tutorials2learn.com/</url>
+	<urltext>Visit the Site: www.tutorials2learn.com</urltext>
+</article>
+<article>
+	<title>block elements and inline elements</title>
+	<description>It is very much important for a web developer to know the characteristics of each elements in HTML. This article briefly explains the difference between the Block elements and the Inline elements in HTML.</description>
+	<url>http://www.tutorials2learn.com/?p=305</url>
+	<urltext>Learn the difference between block elements and inline elements</urltext>
+</article>
+<article>
+	<title>Creating a database search application using Dreamweaver</title>
+	<description>This article describes how to create a search application using Dreamweaver.  This application makes use the Access database to store information and Active Server Pages to retrieve the data in it. This article is oriented to the intermediate Dreamweaver users. You need to have no ASP programming skills to build this application.</description>
+	<url>http://www.tutorials2learn.com/?p=265</url>
+	<urltext>Continue Reading...</urltext>
+</article>
+</root>

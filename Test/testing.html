@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       background-color: rgba(255,0,0,1);
+      .box {
+        /* basic styling */
+        width: 200px;
+        height: 100px;
+        border: 1px solid #555;
+        font: 14px Arial;
+        padding: 20px;
+        /* flexbox setup */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+              }
+      
+      .box > div {
+        -webkit-box-flex: 1;
+        -webkit-transition: width 0.7s ease-out;
+       
+        padding: 20px;
+      }
+      
+      /* our colors */
+      .box > div:nth-child(1){ background : #FCC; }
+      
+      
+      .box > div:hover { 
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div>un</div>
+     
+    </div>
+  </body>
+</html>

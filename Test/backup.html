@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.2.min.js" ></script>
+    <script  type="text/javascript" charset="utf-8" async defer>
+     $(".box div") .hover(
+      function () {
+      $(this).toggleClass("active")
+      .next().stop(true, true).slideToggle();
+  }
+
+);
+    </script>
+    <style>
+
+    h1 {
+        color: #fff;
+        text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+        font: 80px 'ChunkFiveRegular';
+      }
+      h3 {
+        text-shadow: 0px 1px 1px #4d4d4d;
+        color: #222;
+        font: 30px 'LeagueGothicRegular';
+        }
+      body{
+        background-color:#6b885f;
+      }
+      .box {
+        -webkit-border-radius: 20px;
+        border-radius: 20px;  
+        /* basic styling */
+        width: 350px;
+        height: 295px;
+        border: 30px solid #555;
+        font: 14px Arial;
+        padding: 20px 50px;
+
+        /* flexbox setup */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        /*-webkit-box-pack:center;
+        -webkit-box-align:center;*/
+
+        display: -moz-box;
+        -moz-box-orient: vertical;
+      
+        display: box;
+        box-orient: vertical;
+      }
+      
+      .box > div 
+      {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -ms-box-flex: 1;
+        box-flex: 1;
+
+        -webkit-transition: width 0.7s ease-out;
+        -moz-transition: width 0.7s ease-out;
+        -o-transition: width 0.7s ease-out;
+        -ms-transition: width 0.7s ease-out;
+        transition: width 0.7s ease-out;
+        padding-top: 20px;
+        -webkit-border-radius: 40px;
+        border-radius: 20px;
+    }
+      
+      /* our colors */
+      .box > div:nth-child(1){ background : #FCC; margin-bottom: 20px  ;}
+      .box > div:nth-child(2){ background : #ADF; }
+      .box > div:nth-child(3){ background : #777777;  }
+      .box > div:nth-child(4){ background : #ed4732; }
+     .box > div:nth-child(5){ background : #2c6b62;  }
+      .box > div:hover { 
+        width: 200px;
+
+      }
+    </style>
+  </head>
+  <body >
+    <h1>Metro Feeder</h1>
+    <h3>Empower Windows 8</h3>
+    <div class="box">
+      <div id = "1">1. Testing</div>
+      <div id = "2">2. Testing</div>
+      <div id = "3">3. Testing</div>
+      <div id = "4">4. Testing</div>
+      <div id = "5">5. Testing</div>
+    </div>
+    <div>
+      sadsjasdasjkb
+    </div>
+  </body>
+</html>

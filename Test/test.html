@@ -3,62 +3,79 @@
   <head>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.2.min.js" ></script>
     <script  type="text/javascript" charset="utf-8" async defer>
-     $(".box div") .hover(
-      function () {
-      $(this).toggleClass("active")
-      .next().stop(true, true).slideToggle();
-  }
-);
-    </script>
-    <style>
-      .box {
-        /* basic styling */
-        width: 350px;
-        height: 95px;
-        border: 1px solid #555;
-        font: 14px Arial;
-      
-        /* flexbox setup */
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-      
-        display: -moz-box;
-        -moz-box-orient: vertical;
-      
-        display: box;
-        box-orient: vertical;
-      }
-      
-      .box > div 
-      {
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
-        -ms-box-flex: 1;
-        box-flex: 1;
+      $(function() {
 
-        -webkit-transition: width 0.7s ease-out;
-        -moz-transition: width 0.7s ease-out;
-        -o-transition: width 0.7s ease-out;
-        -ms-transition: width 0.7s ease-out;
-        transition: width 0.7s ease-out;
-    }
-      
-      /* our colors */
-      .box > div:nth-child(1){ background : #FCC; }
-      .box > div:nth-child(2){ background : #ADF; }
-     
-      .box > div:hover { 
-        width: 200px;
+        function divClicked(e){
+          /*var el = $(this),
+          cellNumber = el.index()+1,
+          columnNumber = el.parent().index()+1
+          alert(columnNumber+'\t\t'+cellNumber);*/
+          $(this).fadeIn('fast').fadeOut('fast').fadeIn('fast').fadeOut('fast').fadeIn('fast').fadeOut('fast').fadeIn('fast').fadeOut('fast');
+        }
+
+        $(".postBlockInner").click(divClicked);
+        //$(".postBlock").click(divClicked);
+      });
+    </script>
+    <style type="text/css">
+      body{
+        background-color: #FFF;
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .warpper{
+        background-color: transparent;
+        width: 5000px;
+        height: 600px;
+        margin: 0px auto;
+        padding: 10px;
+        overflow: hidden;
+      }
+      .postBlock{
+        float: left;
+        margin: 10px;
+        width: 270px;
+        background-color: transparent;
+      }
+      .postBlockInner{
+        background-color: #EEE;
+        width: 250px;
+        height: 250px;
+        float: left;
+        margin: 10px;        
       }
     </style>
   </head>
   <body>
-    <div class="box">
-      <div id = "Content">1</div>
-      <div id = "Content">2</div>
-    </div>
-    <div>
-      sadsjasdasjkb
-    </div>
+      <div class="warpper">
+        <div class="postBlock">
+          <article class="postBlockInner"></article>
+          <article class="postBlockInner"></article>
+        </div>
+        <div class="postBlock">
+          <article class="postBlockInner"></article>
+          <article class="postBlockInner"></article>
+        </div>
+        <div class="postBlock">
+          <article class="postBlockInner"></article>
+          <article class="postBlockInner"></article>
+        </div>
+        <div class="postBlock">
+          <article class="postBlockInner"></article>
+          <article class="postBlockInner"></article>
+        </div>
+        <div class="postBlock">
+          <article class="postBlockInner"></article>
+          <article class="postBlockInner"></article>
+        </div>
+        <div class="postBlock">
+          <article class="postBlockInner"></article>
+          <article class="postBlockInner"></article>
+        </div> 
+        <div class="postBlock">
+          <article class="postBlockInner"></article>
+        </div>                                       
+      </div>
   </body>
 </html>

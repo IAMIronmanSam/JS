@@ -5,15 +5,29 @@
     <script  type="text/javascript" charset="utf-8" async defer>
       $(function() {
 
-        function divClicked(e){
+        function PlusClicked(e){
           /*var el = $(this),
           cellNumber = el.index()+1,
           columnNumber = el.parent().index()+1
           alert(columnNumber+'\t\t'+cellNumber);*/
-          $(this).fadeIn('fast').fadeOut('fast').fadeIn('fast').fadeOut('fast').fadeIn('fast').fadeOut('fast').fadeIn('fast').fadeOut('fast');
+          /*$(this).fadeIn('fast').fadeOut('fast').fadeIn('fast').fadeOut('fast').fadeIn('fast').fadeOut('fast').fadeIn('fast').fadeOut('fast');*/
+          $(".postBlockInner1").animate({width: "500px", opacity: 0.4, 
+                fontSize: "1.5em"}, 500);
+           $(".postBlockInner1").css('background-color', '#36c9c9');
+           $(".postBlockInner1").css('overflow','hidden');
+           $(".plus").css('visibility','hidden');
+           $(".close").css('visibility','visible');
         }
 
-        $(".postBlockInner").click(divClicked);
+        function CloseClicked (e) {
+          $(".postBlockInner1").animate({width: "250px",height:"250px",fontSize: "0.9em"
+        },200);
+           $(".plus").css('visibility','visible');
+           $(".close").css('visibility','hidden');
+           $(".postBlockInner1").css('background-color', '#FFF');
+        }
+        $(".plus").click(PlusClicked);
+        $(".close").click(CloseClicked);
         //$(".postBlock").click(divClicked);
       });
     </script>
@@ -45,37 +59,91 @@
         float: left;
         margin: 10px;        
       }
+      .postBlockInner1{
+        background-color: #EEE;
+        width: 250px;
+        height: 250px;
+        float: left;
+        margin: 10px;        
+      }
+      .plus{
+        float: right;
+      }
+      .close{
+        float: right;
+      }
     </style>
   </head>
   <body>
       <div class="warpper">
-        <div class="postBlock">
-          <article class="postBlockInner"></article>
-          <article class="postBlockInner"></article>
+      <div class="postBlock">
+          <article class="postBlockInner1">
+            <img src="close.png" style="visibility:hidden"  alt="Close" class="plus">
+            <img src="plus.png" alt="Close" class="close">
+            <p>Title: jbfg g dfgb afkjshfg <p>Author:ksgkdj sgkjgk <p>Description:ggk sgk  kghdgbdfg <p>
+            
+          </article>
+          <article class="postBlockInner1">
+            <img src="close.png" style="visibility:hidden" alt="Close" class="plus">
+            <img src="plus.png" alt="Close" class="close">
+            <p>Title: jbfg g dfgb afkjshfg <p>Author:ksgkdj sgkjgk <p>Description:ggk sgk  kghdgbdfg <p>
+          </article>
         </div>
+
+      
         <div class="postBlock">
-          <article class="postBlockInner"></article>
-          <article class="postBlockInner"></article>
+          <article class="postBlockInner">
+            <img src="plus.png" alt="Close" class="close">
+          </article>
+          <article class="postBlockInner">
+            <img src="plus.png" alt="Close" class="close">
+          </article>
         </div>
+
+        
+
         <div class="postBlock">
-          <article class="postBlockInner"></article>
-          <article class="postBlockInner"></article>
+          <article class="postBlockInner">
+            <img src="plus.png" alt="Close" class="close1">
+          </article>
+          <article class="postBlockInner">
+            <img src="plus.png" alt="Close" class="close">
+          </article>
         </div>
+
         <div class="postBlock">
-          <article class="postBlockInner"></article>
-          <article class="postBlockInner"></article>
+          <article class="postBlockInner">
+            <img src="plus.png" alt="Close" class="close">
+          </article>
+          <article class="postBlockInner">
+            <img src="plus.png" alt="Close" class="close">
+          </article>
         </div>
+
         <div class="postBlock">
-          <article class="postBlockInner"></article>
-          <article class="postBlockInner"></article>
+          <article class="postBlockInner">
+            <img src="plus.png" alt="Close" class="close">
+          </article>
+          <article class="postBlockInner">
+            <img src="plus.png" alt="Close" class="close">
+          </article>
         </div>
+
         <div class="postBlock">
-          <article class="postBlockInner"></article>
-          <article class="postBlockInner"></article>
+          <article class="postBlockInner">
+            <img src="plus.png" alt="Close" class="close">
+          </article>
+          <article class="postBlockInner">
+            <img src="plus.png" alt="Close" class="close">
+          </article>
         </div> 
+
         <div class="postBlock">
-          <article class="postBlockInner"></article>
-        </div>                                       
+          <article class="postBlockInner">
+            <img src="plus.png" alt="Close" class="close">
+          </article>
+        </div>  
+
       </div>
   </body>
 </html>

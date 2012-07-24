@@ -19,7 +19,7 @@
       var infowindow;
 
       function initialize() {
-        var pyrmont = new google.maps.LatLng(13.0810, 80.2740);
+        var pyrmont = new google.maps.LatLng(-33.8665433, 151.1956316);
 
         map = new google.maps.Map(document.getElementById('map'), {
           mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -29,22 +29,32 @@
 
         var request = {
           location: pyrmont,
-          //radius: 50000,
-          types: ['train_station'],
-          name:'park town',
-          rankBy:google.maps.places.RankBy.DISTANCE
+          radius: 5000,
+          types: ['bar']
+          //name:'park town',
+          //rankBy:google.maps.places.RankBy.DISTANCE
           //region:
         };
+        //console.log(request); 
         infowindow = new google.maps.InfoWindow();
         var service = new google.maps.places.PlacesService(map);
-        console.log(request.name);
+        
         service.search(request, callback);
       }
 
       function callback(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
+          //console.log(JSON.stringify(results));
           for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
+            console.log(results[i]);
+             console.log("Latitude:"+results[i].geometry.location ); //Get Lat and lang
+             console.log("Name:"+results[i].name ); //Name Of the place
+             console.log("Rating:"+results[i].rating ); //Rating of the Place
+             console.log("Type:"+results[i].types ); //Type of the Place
+             console.dir("Opening Now:"+JSON.stringify(results[i].opening_hours));
+            console.log("location:"+results[i].vicinity);
+
           }
         }
       }
